@@ -271,4 +271,32 @@ nav ul li a.active {
   color: #FFF;
 }
 
+/* about */
+.about {
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+}
+.about p {
+  margin-bottom: 30px;
+}
+.about p span.sign {
+  font-family: "League Script";
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #0F0F0F;
+}
+
+.about-img {
+  background: url(https://images.pexels.com/photos/999267/pexels-photo-999267.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 900px;
+  width: 45%;
+  position: relative;
+  top: -900px;
+  margin-bottom: -850px;
+}
+
 /*# sourceMappingURL=app.css.map */
