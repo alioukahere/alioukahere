@@ -188,6 +188,7 @@
 
 		<div class="work">
 			<div class="container">
+				<div class="img-box mobile" style="background: url(https://assets.materialup.com/uploads/ec5605ed-3cf5-4d3c-a2aa-48a63bdc092e/teaser.png);"></div>
 				<div class="content">
 					<h3>app name</h3>
 					<h4>mobile development</h4>
@@ -200,7 +201,7 @@
 					</p>
 					<a href="#" class="btn">view case study</a>
 				</div>
-				<div class="img-box" style="background: url(https://assets.materialup.com/uploads/ec5605ed-3cf5-4d3c-a2aa-48a63bdc092e/teaser.png);"></div>
+				<div class="img-box normal" style="background: url(https://assets.materialup.com/uploads/ec5605ed-3cf5-4d3c-a2aa-48a63bdc092e/teaser.png);"></div>
 			</div>
 		</div>
 
@@ -224,6 +225,7 @@
 
 		<div class="work">
 			<div class="container">
+				<div class="img-box mobile" style="background: url(https://assets.materialup.com/uploads/bb81057f-42a4-4be3-ad9c-9f8e980845ec/preview.png);"></div>
 				<div class="content">
 					<h3>app name</h3>
 					<h4>mobile development</h4>
@@ -236,7 +238,7 @@
 					</p>
 					<a href="#" class="btn">view case study</a>
 				</div>
-				<div class="img-box" style="background: url(https://assets.materialup.com/uploads/bb81057f-42a4-4be3-ad9c-9f8e980845ec/preview.png);"></div>
+				<div class="img-box normal" style="background: url(https://assets.materialup.com/uploads/bb81057f-42a4-4be3-ad9c-9f8e980845ec/preview.png);"></div>
 			</div>
 		</div>
 
@@ -286,7 +288,9 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<script type="text/javascript">
-		$('.toggle-mobile').on('click', function() {
+		$('.toggle-mobile').on('click', function(event) {
+			event.preventDefault();
+
 			if ($(this).hasClass('clicked')) {
 				$(this).html('<i class="fas fa-bars"></i>');
 				$(this).removeClass('clicked');
