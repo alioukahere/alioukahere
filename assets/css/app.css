@@ -23,6 +23,9 @@ h1, h2, h3, h4, h5, h6 {
 ul {
   padding-left: 0;
 }
+ul li {
+  list-style-type: none;
+}
 
 .container {
   margin: 0 auto;
@@ -334,6 +337,54 @@ nav ul li a.active {
 }
 .work .container .content {
   width: 50%;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  position: relative;
+}
+footer::after {
+  content: "";
+  position: absolute;
+  width: 550px;
+  height: 500px;
+  top: 0;
+  left: -250px;
+  background: #EEE;
+  border-radius: 50%;
+}
+footer .foot {
+  width: 50%;
+  margin: auto;
+}
+footer .foot h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+footer .foot p {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+footer .foot ul:not(.socials) li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+footer .foot ul:not(.socials) li i {
+  margin-right: 5px;
+}
+footer .foot ul.socials {
+  margin-top: 70px;
+}
+footer .foot ul.socials li {
+  display: inline-block;
+}
+footer .foot ul.socials li:not(:last-child) {
+  margin-right: 30px;
+}
+footer .foot ul.socials li a i {
+  color: #868686;
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=app.css.map */
