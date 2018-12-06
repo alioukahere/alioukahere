@@ -26,6 +26,17 @@
 		</div>
 	</nav>
 
+	<div class="mobile-nav">
+		<a href="#" class="toggle-mobile"><i class="fas fa-bars"></i></a>
+
+		<ul class="mobile">
+			<li><a href="#" class="active">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Work</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</div>
+
 	<div class="hero">
 		<div class="container">
 			<span>Hello</span>
@@ -35,7 +46,7 @@
 			based in Dakar.
 			
 			<div style="margin-top: 30px;">
-				<a href="#" class="btn">hire me</a>
+				<a href="#" class="btn">contact me</a>
 			</div>
 		</div>
 	</div>
@@ -271,5 +282,20 @@
 			</div>
 		</div>
 	</footer>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$('.toggle-mobile').on('click', function() {
+			if ($(this).hasClass('clicked')) {
+				$(this).html('<i class="fas fa-bars"></i>');
+				$(this).removeClass('clicked');
+			} else {
+				$(this).html('X');
+				$(this).addClass('clicked');
+			}
+			$('.mobile').toggle('slow');
+		});
+	</script>
 </body>
 </html>

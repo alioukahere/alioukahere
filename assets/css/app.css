@@ -7,6 +7,7 @@
 
 body {
   background-color: #F7F7F7;
+  overflow-x: hidden;
 }
 
 p {
@@ -151,6 +152,46 @@ nav ul li a:hover {
 nav ul li a.active {
   color: #0F0F0F;
 }
+@media screen and (max-width: 1100px) {
+  nav {
+    display: none;
+  }
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #FFF;
+  padding: 2.2rem;
+  z-index: 999;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+.mobile-nav a {
+  font-size: 2.2rem;
+  text-decoration: none;
+}
+.mobile-nav ul {
+  margin-top: 40px;
+  width: 150px;
+  display: none;
+}
+.mobile-nav ul li {
+  margin-bottom: 20px;
+}
+.mobile-nav ul li a {
+  text-decoration: none;
+  color: #ACACAC;
+  font-size: 18px;
+  font-family: "PT Serif";
+  transition: all 0.5s;
+}
+.mobile-nav ul li a:hover {
+  color: #0F0F0F;
+}
+.mobile-nav ul li a.active {
+  color: #0F0F0F;
+}
 
 /* hero */
 .hero {
@@ -176,16 +217,21 @@ nav ul li a.active {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 800px;
+  min-height: 800px;
   width: 50%;
   position: absolute;
   top: 0;
   right: 0;
 }
+@media screen and (max-width: 1100px) {
+  .hero-img {
+    display: none;
+  }
+}
 
 /* partners */
 .partners {
-  background-color: #F9F9F9;
+  background-color: #FEFEFE;
   padding: 3rem 5rem;
   border-radius: 15px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
@@ -307,6 +353,8 @@ nav ul li a.active {
   min-height: 500px;
   display: flex;
   align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .work .container {
   display: flex;
@@ -344,6 +392,16 @@ footer {
   text-align: center;
   position: relative;
 }
+footer::before {
+  content: "";
+  position: absolute;
+  width: 550px;
+  height: 500px;
+  top: 0;
+  right: -250px;
+  background: #F1F1F1;
+  border-radius: 50%;
+}
 footer::after {
   content: "";
   position: absolute;
@@ -351,7 +409,7 @@ footer::after {
   height: 500px;
   top: 0;
   left: -250px;
-  background: #EEE;
+  background: #F1F1F1;
   border-radius: 50%;
 }
 footer .foot {
