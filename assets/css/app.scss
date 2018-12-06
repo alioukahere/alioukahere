@@ -524,18 +524,6 @@ footer {
 	text-align: center;
 	position: relative;
 
-	&::before {
-		content: '';
-		position: absolute;
-		width: 550px;
-		height: 500px;
-		top: 0;
-		right: -250px;
-		background: #F1F1F1;
-		border-radius: 50%;
-		z-index: -1;
-	}
-
 	&::after {
 		content: '';
 		position: absolute;

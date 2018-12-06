@@ -455,17 +455,6 @@ footer {
   text-align: center;
   position: relative;
 }
-footer::before {
-  content: "";
-  position: absolute;
-  width: 550px;
-  height: 500px;
-  top: 0;
-  right: -250px;
-  background: #F1F1F1;
-  border-radius: 50%;
-  z-index: -1;
-}
 footer::after {
   content: "";
   position: absolute;
