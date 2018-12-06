@@ -126,8 +126,8 @@ ul {
 }
 
 .section {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 70px;
+	padding-bottom: 70px;
 
 	h2 {
 		text-transform: capitalize;
@@ -341,4 +341,48 @@ nav {
 	position: relative;
 	top: -900px;
 	margin-bottom: -850px;
+}
+
+
+/* work */
+.work {
+	min-height: 500px;
+	display: flex;
+	align-items: center;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		h3 {
+			text-transform: capitalize;
+			margin-bottom: 15px;
+			font-size: 1.5rem;
+		}
+
+		h4 {
+			color: #7D7D7D;
+			margin-bottom: 20px;
+		}
+
+		p {
+			margin-bottom: 20px;
+			font-size: 16px;
+		}
+
+		.img-box {
+			background-repeat: no-repeat !important;
+			background-size: cover !important;
+			background-position: center !important;
+			width: 40%;
+			height: 300px;
+			border-radius: 10px;
+			box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+		}
+
+		.content {
+			width: 50%;
+		}
+	}
 }
