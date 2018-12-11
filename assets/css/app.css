@@ -193,6 +193,11 @@ nav ul li a.active {
 .mobile-nav ul li a.active {
   color: #0F0F0F;
 }
+@media screen and (max-width: 1100px) {
+  .mobile-nav {
+    display: block;
+  }
+}
 
 /* hero */
 .hero {
