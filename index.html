@@ -18,10 +18,10 @@
 	<nav>
 		<div class="container">
 			<ul>
-				<li><a href="#" class="active">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Work</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="#home" class="active">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#work">Work</a></li>
+				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -30,14 +30,14 @@
 		<a href="#" class="toggle-mobile"><i class="fas fa-bars"></i></a>
 
 		<ul class="mobile">
-			<li><a href="#" class="active">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Work</a></li>
-			<li><a href="#">Contact</a></li>
+			<li><a href="#home" class="active">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#work">Work</a></li>
+			<li><a href="#contact">Contact</a></li>
 		</ul>
 	</div>
 
-	<div class="hero">
+	<div class="hero" id="home">
 		<div class="container">
 			<span>Hello</span>
 			<h1>I'm Aliou Diallo</h1>
@@ -116,7 +116,7 @@
 						<div class="service-card">
 							<h3>agile methodology</h3>
 							<p>
-								I deliver your project in small, but consumable iteration weekly so you can respond to change change quickly.
+								I deliver your project in small, but consumable iteration weekly so you can respond to change quickly.
 							</p>
 						</div>
 					</div>
@@ -125,7 +125,7 @@
 		</div>
 	</div>
 
-	<div class="section about">
+	<div class="section about" id="about">
 		<div class="container">
 			<div class="row">
 				<div class="flex-list">
@@ -158,7 +158,7 @@
 
 	<div class="about-img"></div>
 
-	<div class="section">
+	<div class="section" id="work">
 		<div class="container">
 			<h2>latest work</h2>
 		</div>
@@ -256,7 +256,7 @@
 		</div>
 	</div>
 
-	<footer class="section">
+	<footer class="section" id="contact">
 		<div class="container">
 			<div class="foot">
 				<h2>say hello!</h2>
@@ -295,6 +295,40 @@
 			}
 			$('.mobile').toggle('slow');
 		});
+
+
+		//scrollSpy function
+    	function scrollSpy() {
+      		var sections = ['home', 'about', 'work', 'contact'];
+      		var current;
+
+      		for (var i = 0; i < sections.length; i++) {
+        		if ( $('#'+sections[i]).offset().top <= $(window).scrollTop() ) {
+          			current = sections[i];
+        		}
+      		}
+      		
+      		$("nav ul li a[href='#"+current+"'], .mobile-nav ul li a[href='#"+current+"']").addClass('active');
+      		$("nav ul li a, .mobile-nav ul li a").not("a[href='#"+current+"']").removeClass('active');      
+    	}
+    
+    	// smooth scrolling navigation
+    	$("nav ul li a, .mobile-nav ul li a").click( function() {
+      		var target = $(this).attr("href");
+      		$("body, html").animate({
+        		scrollTop: $(target).offset().top
+      		}, 1000);
+      		return false;
+    	});
+    
+    	//scrollSpy call
+    	$(document).ready( function() {
+      		scrollSpy();
+    	});
+    
+    	$(window).scroll( function() {
+      		scrollSpy();
+    	});
 	</script>
 </body>
 </html>
