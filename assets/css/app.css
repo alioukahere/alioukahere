@@ -415,10 +415,10 @@ nav ul li a.active {
 }
 .work .container h4 {
   color: #7D7D7D;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .work .container p {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 16px;
 }
 .work .container .img-box {
@@ -435,6 +435,20 @@ nav ul li a.active {
 }
 .work .container .content {
   width: 50%;
+}
+.work .container .content img {
+  height: 50px;
+  vertical-align: middle;
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: all 0.5s ease;
+}
+.work .container .content img:hover {
+  filter: none;
+  opacity: 1;
+}
+.work .container .content img:not(:last-child) {
+  margin-right: 10px;
 }
 @media screen and (max-width: 900px) {
   .work .container {

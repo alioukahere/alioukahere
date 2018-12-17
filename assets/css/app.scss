@@ -473,11 +473,11 @@ nav {
 
 		h4 {
 			color: #7D7D7D;
-			margin-bottom: 20px;
+			margin-bottom: 30px;
 		}
 
 		p {
-			margin-bottom: 20px;
+			margin-bottom: 30px;
 			font-size: 16px;
 		}
 
@@ -497,6 +497,23 @@ nav {
 
 		.content {
 			width: 50%;
+
+			img {
+				height: 50px;
+				vertical-align: middle;
+				filter: grayscale(100%);
+				opacity: .5;
+				transition: all .5s ease;
+
+				&:hover {
+					filter: none;
+					opacity: 1;
+				}
+
+				&:not(:last-child) {
+					margin-right: 10px;
+				}
+			}
 		}
 
 		@media screen and (max-width: 900px) {
