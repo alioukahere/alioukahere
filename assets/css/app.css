@@ -510,6 +510,7 @@ footer .foot ul.socials {
 }
 footer .foot ul.socials li {
   display: inline-block;
+  margin-bottom: 20px;
 }
 footer .foot ul.socials li:not(:last-child) {
   margin-right: 30px;
